@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>iOS Payment UI</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #ececef;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        display: flex;
+        justify-content: center;
+    }
+
+    .phone {
+        width: 390px;
+        background: #f2f2f7;
+        padding-bottom: 50px;
+    }
+
+    /* ---------------- FAVORITES ---------------- */
+    .title {
+        font-size: 22px;
+        font-weight: 700;
+        padding: 20px 15px 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .apps {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 18px;
+        margin-bottom: 20px;
+    }
+
+    .app {
+        text-align: center;
+        width: 70px;
+    }
+
+    .app img {
+        width: 65px;
+        height: 65px;
+        background: #fff;
+        border-radius: 20px;
+        padding: 12px;
+        object-fit: contain;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .app-name {
+        margin-top: 5px;
+        font-size: 13px;
+    }
+
+    /* ---------------- PRIVACY REPORT ---------------- */
+    .subtitle {
+        font-size: 22px;
+        font-weight: 700;
+        padding: 0 18px;
+        margin-bottom: 10px;
+    }
+
+    .privacy-box {
+        background: white;
+        margin: 0 18px;
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        line-height: 20px;
+        font-size: 15px;
+    }
+
+    .privacy-icon {
+        width: 40px;
+        height: 40px;
+        background: #e6e6e6;
+        border-radius: 12px;
+        float: left;
+        margin-right: 12px;
+    }
+
+    /* ---------------- APPLE PAY SHEET ---------------- */
+    .sheet {
+        background: #fff;
+        margin-top: 20px;
+        border-radius: 30px 30px 0 0;
+        box-shadow: 0 -5px 25px rgba(0,0,0,0.2);
+        padding: 15px;
+        padding-top: 5px;
+    }
+
+    .grabber {
+        width: 55px;
+        height: 5px;
+        background: #c9c9c9;
+        border-radius: 3px;
+        margin: 10px auto;
+    }
+
+    .sheet-title {
+        text-align: center;
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .amount {
+        text-align: center;
+        font-size: 38px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .paylogo {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 4px;
+        font-size: 16px;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .row span:last-child {
+        color: #8d8d8d;
+    }
+
+    /* ---------------- LOADER ---------------- */
+    .processing-box {
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .loader {
+        width: 35px;
+        height: 35px;
+        border: 4px solid #d9d9d9;
+        border-top-color: #000;
+        border-radius: 50%;
+        margin: 0 auto 12px;
+        animation: spin 0.9s linear infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    .proc-title {
+        font-weight: 600;
+        font-size: 17px;
+    }
+
+    .proc-small {
+        font-size: 13px;
+        color: #555;
+    }
+</style>
+</head>
+<body>
+
+<div class="phone">
+
+    <!-- FAVORITES -->
+    <div class="title">👤 Favorites</div>
+
+    <div class="apps">
+        <div class="app">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"/>
+            <div class="app-name">Apple</div>
+        </div>
+
+        <div class="app">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Bing_logo_%282016%29.svg"/>
+            <div class="app-name">Bing</div>
+        </div>
+
+        <div class="app">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"/>
+            <div class="app-name">Google</div>
+        </div>
+
+        <div class="app">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Yahoo%21_%282019%29.svg"/>
+            <div class="app-name">Yahoo</div>
+        </div>
+    </div>
+
+    <!-- PRIVACY REPORT -->
+    <div class="subtitle">Privacy Report</div>
+
+    <div class="privacy-box">
+        <div class="privacy-icon"></div>
+        In the last seven days, Safari has prevented 11 trackers from profiling you.
+    </div>
+
+    <!-- APPLE PAY SHEET -->
+    <div class="sheet">
+
+        <div class="grabber"></div>
+
+        <div class="sheet-title">Pay Apple Gift Card</div>
+        <div class="amount">$143.95</div>
+        <div class="paylogo"> Pay</div>
+
+        <div class="row">
+            <span>Payment</span>
+            <span>Apple Pay ›</span>
+        </div>
+
+        <div class="row">
+            <span>Billing</span>
+            <span>Same as shipping ›</span>
+        </div>
+
+        <div class="processing-box">
+            <div class="loader"></div>
+            <div class="proc-title">Processing Payment</div>
+            <div class="proc-small">Please wait...</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Apple Invoice</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #f2f2f2;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        display: flex;
+        justify-content: center;
+    }
+
+    .page {
+        width: 510px;
+        background: white;
+        padding: 25px 35px;
+        box-shadow: 0 0 35px rgba(0,0,0,0.12);
+        margin: 25px 0;
+    }
+
+    /* Header */
+    .header {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .badge {
+        display: inline-block;
+        font-size: 14px;
+        margin-top: -10px;
+        padding: 6px 12px;
+        background: #efefef;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    /* Invoice Title */
+    h2 {
+        font-size: 26px;
+        font-weight: 600;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    .apple-logo {
+        width: 32px;
+        margin-bottom: 15px;
+    }
+
+    .receipt-text {
+        float: right;
+        font-size: 20px;
+        color: #888;
+        font-weight: 400;
+        margin-top: -30px;
+    }
+
+    /* Order Information */
+    .info-row {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+        font-size: 13px;
+    }
+
+    .info-row a {
+        color: #0070c9;
+        text-decoration: none;
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid #e0e0e0;
+        margin: 20px 0;
+    }
+
+    /* Product Row */
+    .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item-left {
+        display: flex;
+        gap: 12px;
+    }
+
+    .item-left img {
+        width: 42px;
+        border-radius: 10px;
+    }
+
+    .item-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 3px;
+    }
+
+    .item-sub {
+        font-size: 13px;
+        color: #777;
+    }
+
+    .item-price {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    /* Payment Method Box */
+    .pay-box {
+        background: #f3f3f5;
+        padding: 14px;
+        border-radius: 12px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #444;
+    }
+
+    .pay-title {
+        font-size: 11px;
+        color: #999;
+        margin-bottom: 6px;
+        letter-spacing: .5px;
+    }
+
+    /* Total Row */
+    .total-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 19px;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+    /* Footer Support */
+    .support-text {
+        font-size: 13px;
+        color: #666;
+        text-align: center;
+        margin: 30px 0 10px 0;
+        line-height: 20px;
+    }
+
+    .support-text a {
+        color: #0070c9;
+        text-decoration: none;
+    }
+
+    /* Apple Footer Section */
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+        color: #888;
+        line-height: 18px;
+    }
+
+    .footer a {
+        color: #0070c9;
+        text-decoration: none;
+        margin: 0 6px;
+        font-size: 12px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="header">Apple</div>
+    <div class="badge">1 of 1</div>
+
+    <h2>Your invoice from Apple.</h2>
+
+    <img class="apple-logo" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg">
+    <div class="receipt-text">Receipt</div>
+
+    <hr>
+
+    <div class="info-row">
+        <div>
+            ORDER ID<br>
+            <a href="#">MTY2MDHS0F</a>
+        </div>
+        <div style="text-align:right;">
+            DOCUMENT NO.<br>
+            <a href="#">146553108072</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div style="font-size: 18px; font-weight:600; margin-bottom: 15px;">iTunes Store</div>
+
+    <div class="item">
+        <div class="item-left">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/51/cc/23/51cc2341-bfae-7dd0-a6ad-e2ce65379b3f/source/512x512bb.jpg">
+            <div>
+                <div class="item-title">iTunes Gift</div>
+                <div class="item-sub">iTunes Gift Purchase</div>
+            </div>
+        </div>
+
+        <div class="item-price">$143.95</div>
+    </div>
+
+    <!-- Payment Box -->
+    <div class="pay-box">
+        <div class="pay-title">PAYMENT METHOD</div>
+        Apple Pay
+    </div>
+
+    <!-- Total -->
+    <div class="total-row">
+        <span>TOTAL</span>
+        <span>$143.95</span>
+    </div>
+
+    <hr>
+
+    <!-- Support Footer -->
+    <div class="support-text">
+        Get help with subscriptions and purchases. Visit 
+        <a href="#">Apple Support</a>.<br>
+        Learn how to manage your password preferences for iTunes, Apple Books and App Store purchases.<br>
+        To learn more about how Apple protects your information, please review our 
+        <a href="#">privacy policy</a>.
+    </div>
+
+    <div class="footer">
+        Apple ID Summary • 
+        <a href="#">Terms of Sale</a> • 
+        <a href="#">Privacy Policy</a><br><br>
+
+        Copyright © 2025 Apple Distribution International Ltd.<br>
+        All rights reserved.<br>
+        Apple, One Apple Park Way, Cupertino, CA 95014, U.S.A.
+    </div>
+
+</div>
+
+</body>
+</html>

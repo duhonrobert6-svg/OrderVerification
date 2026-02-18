@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Apple Pay UI Perfect Copy</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #efefef;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        display: flex;
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    /* Main container */
+    .container {
+        width: 347px;
+        background: #fff;
+        border-radius: 32px 32px 0 0;
+        box-shadow: 0 -3px 25px rgba(0,0,0,0.15);
+        overflow: hidden;
+    }
+
+    /* =========================== */
+    /* FAVORITES SECTION (FIXED)   */
+    /* =========================== */
+    .top-bar {
+        background: #f5f5f7;
+        padding: 15px;
+        border-bottom: 1px solid #dcdcdc;
+    }
+
+    .top-title {
+        font-size: 20px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .profile-icon {
+        font-size: 20px;
+    }
+
+    .apps-row {
+        display: flex;
+        gap: 18px;
+        padding-left: 5px;
+    }
+
+    .app {
+        width: 60px;
+        text-align: center;
+    }
+
+    .app img {
+        width: 55px;
+        height: 55px;
+        border-radius: 15px;
+        background: white;
+        padding: 8px;
+        object-fit: contain;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    .app-name {
+        margin-top: 6px;
+        font-size: 12px;
+        color: #333;
+    }
+
+    /* Apple Pay Popup */
+    .popup {
+        padding: 15px 20px;
+        padding-bottom: 0;
+    }
+
+    .grabber {
+        width: 55px;
+        height: 5px;
+        background: #d6d6d6;
+        border-radius: 3px;
+        margin: 10px auto 15px;
+    }
+
+    .title {
+        text-align: center;
+        color: #6a6a6a;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .amount {
+        text-align: center;
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .applepay {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 0;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 15px;
+    }
+
+    .right {
+        color: #9a9a9a;
+    }
+
+    /* Processing Section */
+    .processing {
+        text-align: center;
+        padding: 22px 0 35px;
+    }
+
+    .loader {
+        width: 30px;
+        height: 30px;
+        border: 3px solid #d5d5d5;
+        border-top-color: #000;
+        border-radius: 50%;
+        margin: 0 auto 12px;
+        animation: spin 0.9s linear infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    .proc-title {
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    .proc-small {
+        font-size: 13px;
+        color: #777;
+    }
+
+    /* Face ID section */
+    .face {
+        text-align: center;
+        padding: 15px 0 25px;
+        background: #f6f6f6;
+    }
+
+    .face img {
+        width: 48px;
+        display: block;
+        margin: 0 auto 5px;
+    }
+
+    .face-text {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .cancel {
+        color: #007aff;
+        font-size: 16px;
+        text-decoration: none;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<!-- =========================== -->
+<!-- FAVORITES SECTION (TOP)     -->
+<!-- =========================== -->
+<div class="top-bar">
+    <div class="top-title">
+        <span class="profile-icon">👤</span>
+        Favorites
+    </div>
+
+    <div class="apps-row">
+
+        <div class="app">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+            <div class="app-name">Apple</div>
+        </div>
+
+        <div class="app">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Bing_logo_%282016%29.svg" />
+            <div class="app-name">Bing</div>
+        </div>
+
+        <div class="app">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+            <div class="app-name">Google</div>
+        </div>
+
+        <div class="app">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Yahoo%21_%282019%29.svg" />
+            <div class="app-name">Yahoo</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- =========================== -->
+<!-- APPLE PAY POPUP             -->
+<!-- =========================== -->
+<div class="popup">
+
+    <div class="grabber"></div>
+
+    <div class="title">Pay Apple Gift Card</div>
+    <div class="amount">$143.95</div>
+    <div class="applepay"> Pay</div>
+
+    <div class="row">
+        <span>Payment</span>
+        <span class="right">Apple Pay ›</span>
+    </div>
+
+    <div class="row">
+        <span>Billing</span>
+        <span class="right">Same as shipping ›</span>
+    </div>
+
+    <div class="processing">
+        <div class="loader"></div>
+        <div class="proc-title">Processing Payment</div>
+        <div class="proc-small">Please wait...</div>
+    </div>
+</div>
+
+<!-- =========================== -->
+<!-- FACE ID SECTION             -->
+<!-- =========================== -->
+<div class="face">
+    <img src="https://avatars.mds.yandex.net/i?id=1a920c3fe1640ab32ba63b137a39eaa243e8dc9b-5603715-images-thumbs&n=13">
+    <div class="face-text">Pay with Face ID</div>
+    <a href="#" class="cancel">Cancel</a>
+</div>
+
+</div>
+
+</body>
+</html>
